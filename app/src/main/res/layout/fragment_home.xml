@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:background="@drawable/background_day">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_weather_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Mostly \nsunny"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/txt_london_uk"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_weather_home"
+            app:layout_constraintVertical_bias="0.745" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_21"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_city"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_city"
+            app:layout_constraintTop_toBottomOf="@+id/tv_city" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_feels_like_21"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/tv_city"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_city"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/tv_precict_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="476dp"
+            android:text="14.00"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/tv_city"
+            app:layout_constraintTop_toBottomOf="@+id/tv_weather_home" />
+
+        <TextView
+            android:id="@+id/tv_predict_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="476dp"
+            android:layout_marginEnd="16dp"
+            android:text="18.00"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_precict_one"
+            app:layout_constraintTop_toBottomOf="@+id/tv_weather_home" />
+
+        <ImageView
+            android:id="@+id/iv_predict_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cloudy"
+            app:layout_constraintEnd_toEndOf="@+id/tv_precict_one"
+            app:layout_constraintStart_toStartOf="@+id/tv_precict_one"
+            app:layout_constraintTop_toBottomOf="@+id/tv_precict_one"
+            android:contentDescription="@string/txt_imageview" />
+
+        <ImageView
+            android:id="@+id/iv_predict_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/partly_cloudy"
+            app:layout_constraintEnd_toEndOf="@+id/tv_predict_two"
+            app:layout_constraintStart_toStartOf="@+id/tv_predict_two"
+            app:layout_constraintTop_toBottomOf="@+id/tv_predict_two"
+            android:contentDescription="@string/txt_imageview" />
+
+        <TextView
+            android:id="@+id/tv_temp_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18º"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/iv_predict_one"
+            app:layout_constraintStart_toStartOf="@+id/iv_predict_one"
+            app:layout_constraintTop_toBottomOf="@+id/iv_predict_one" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19º"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/iv_predict_two"
+            app:layout_constraintStart_toStartOf="@+id/iv_predict_two"
+            app:layout_constraintTop_toBottomOf="@+id/iv_predict_two" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
